@@ -1,0 +1,37 @@
+{
+    "name": "vsc-quick-require",
+    "displayName": "vsc-quick-require",
+    "description": "VS Code extension that add a command for inserting a require statement based on the variable name",
+    "version": "0.0.1",
+    "publisher": "kaes",
+    "engines": {
+        "vscode": "^1.16.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.quickRequire"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.quickRequire",
+                "title": "quick require"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "vscode": "^1.1.5",
+        "eslint": "^4.7.0",
+        "@types/node": "^8.0.28"
+    },
+    "dependencies": {
+        "slash": "1.0.0"
+    }
+}
